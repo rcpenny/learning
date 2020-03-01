@@ -7,3 +7,6 @@ do
   echo "COUNT = $COUNT"
   ((COUNT++))
 done
+
+echo "while loop finished"
+exit 0
