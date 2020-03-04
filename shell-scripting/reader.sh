@@ -8,3 +8,5 @@ do
 done < "$1"
 
 exit 0
+
+# ./reader.sh names.txt >> output.txt
