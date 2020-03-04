@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
 function hello() {
-  echo "hello"
+  local LNAME=$1
+  echo "hello $LNAME"
 }
 
 goodbye() {
-  echo "goodbye"
+  echo "goodbye $1"
 }
 
-hello
+hello bob
 
-goodbye
+goodbye angela
 
 exit 0
