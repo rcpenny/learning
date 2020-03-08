@@ -1,33 +1,44 @@
 #include <iostream>
-#include <string>
-#include <stdlib.h>
+#include <Windows.h>
 
 using namespace std;
 
+CRITICAL_SECTION critical;
+
 class Leader {
 
-  private:
-    static Leader * _instance;
-
-    Leader() {
-      cout << "new leader elected" << endl;
-    }
-  
   public:
     static Leader * getInstance() {
+      EnterCriticalSection(&critical);
+      
       if (_instance == NULL) {
-        _instance = new Leader;
+        _instance = new Leader();
       }
       return _instance;
+      LeaveCriticalSection(&critical);
     }
 
+  private:
+	  static Leader * _instance;
+	  // Define the constructor to be protected
+	  Leader() {
+		  cout << "New Leader elected" << endl;
+	  }
+
+  public:
     void giveSpeech() {
-      cout << "address the public" << endl;
+      cout << "Address the public." << endl;
     }
 };
 
-Leader* Leader::_instance = NULL;
+Leader* Leader::_instance = 0;
 
 int main() {
-  Leader::getInstance() -> giveSpeech();
+	InitializeCriticalSection(&critical);
+
+	Leader::getInstance()->giveSpeech();
+
+	DeleteCriticalSection(&critical);
+
+	cout << "No longer in critical section" << endl;
 }
