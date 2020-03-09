@@ -1,0 +1,3 @@
+interface ImageReader {
+  DecodedImage getDecodeImage();
+}
