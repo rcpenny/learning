@@ -1,0 +1,3 @@
+# add files
+git add <filename1> <filename2> ...
+git add .
