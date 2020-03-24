@@ -13,3 +13,6 @@ git rm <filename>
 
 # move rename files
 git mv <prev_filename> <new_filename>
+
+# view commit
+git show <id>
