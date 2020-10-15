@@ -1,6 +1,5 @@
 HELP.md
 target/
-.mvn
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -14,6 +13,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
+.mvn
 .idea
 *.iws
 *.iml
