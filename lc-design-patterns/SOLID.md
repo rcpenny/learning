@@ -1,11 +1,9 @@
 SOLID principle
 
 1. Single responsibility principle
-  a class should only be responsible for 1 job,
-  there is only one reason to edit this class.
+	a class should have a single responsbility. that is, only changse to one part of the software's specification should be able to affect the specification of the class.
 2. Open-Close principle
-  a class, module or a function should be close for modification
-  and open for extension.
+	Softeare entities should be open for extension, but close for modification.
 3. Liskov substitution principle
   child-class could fully replace its parent, which means inheritance
   only extends functionalities but not break parent-class's original feature.
