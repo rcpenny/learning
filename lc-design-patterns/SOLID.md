@@ -1,16 +1,12 @@
 SOLID principle
 
 1. Single responsibility principle
-	a class should have a single responsbility. that is, only changse to one part of the software's specification should be able to affect the specification of the class.
+A class should have one, and only one, reason to change.
 2. Open-Close principle
-	Softeare entities should be open for extension, but close for modification.
+Software entities should be open for extension, but close for modification.
 3. Liskov substitution principle
-  child-class could fully replace its parent, which means inheritance
-  only extends functionalities but not break parent-class's original feature.
+Object in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
 4. Interface Segregation principle
-  client should not depend on interfaces it does not actually requires.
-  if a client implements some services, we should segregate interfaces to let
-  impl class to only depend on the methods it requires.
+Many client-specific interfaces are better than one general-purpose interface.
 5. Dependency Inversion principle
-  details rely on abstraction while abstration does not rely on details.
-  program's details are implemented on the lower end impl surface.
+One should depend upon abstractions, not concretions.
